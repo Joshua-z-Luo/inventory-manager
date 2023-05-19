@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+
+<form method="POST">
+    <textarea name="note" id="note" class="form-control"></textarea>
+    <br />
+    <div align="center">
+        <button type="submit" class="btn btn-primary">Add Note</button>
+    </div>
+    </form>
+
+<head>
+    <title>Add New Part</title>
+    </head>
+    <body>
+    <h3>Part Form</h3>
+    <form action="/add" method="POST">
+        <label>First Name</label>
+        <input type="text" name="first_name" placeholder="first name...">
+        <label>Last Name</label>
+        <input type="text" name= "last_name" placeholder="last name...">
+        <label>Age</label>
+        <input type="number" name="age" placeholder="age..">
+        <button type="submit" class="btn btn-primary mb1 black bg-yellow">Add</button>  
+    </form>
+    </body>
