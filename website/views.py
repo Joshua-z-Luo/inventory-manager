@@ -9,6 +9,11 @@ views = Blueprint('views', __name__)
 @views.route('/', methods=['GET', 'POST'])
 @login_required
 def home():
+    return render_template("home.html", user=current_user)
+
+@views.route('/addpart', methods=['GET', 'POST'])
+@login_required
+def addpart():
     if request.method == 'POST': 
         #note = request.form.get('note')#Gets the note from the HTML 
         name = str(request.form.get('name'))
@@ -25,7 +30,7 @@ def home():
             db.session.commit()
             flash('Part added!', category='success')
 
-    return render_template("home.html", user=current_user)
+    return render_template("addpart.html", user=current_user)
 
 @views.route('/delete-note', methods=['POST'])
 def delete_note():  

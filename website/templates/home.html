@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
   %}
+  <h1 align="left"></h1>
   <h1 align="left">Parts</h1>
   <table class="table table-striped" id="notes">
     <thead>
@@ -23,33 +24,4 @@
         {% endfor %}
     </tbody>
   </table>
-
-
-    
-  
-      <form method="POST" class="form-horizontal">
-        <div class="form-group">
-          <label class="control-label col-sm-2" for="name">Name:</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" name="name" id="name" placeholder="Enter name">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="control-label col-sm-10" for="model">Model/Serial Number:</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" name="model" id="model" placeholder="Enter model/serial number">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="control-label col-sm-2" for="amount">Amount:</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter amount">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-warning">Submit</button>
-          </div>
-        </div>
-      </form> 
   {% endblock %}

@@ -1,26 +1,31 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
-%}
+    %}
+    <h1 align="left"></h1>
+    <h1 align="left">Add Part</h1>
 
-<form method="POST">
-    <textarea name="note" id="note" class="form-control"></textarea>
-    <br />
-    <div align="center">
-        <button type="submit" class="btn btn-primary">Add Note</button>
-    </div>
-    </form>
-
-<head>
-    <title>Add New Part</title>
-    </head>
-    <body>
-    <h3>Part Form</h3>
-    <form action="/add" method="POST">
-        <label>First Name</label>
-        <input type="text" name="first_name" placeholder="first name...">
-        <label>Last Name</label>
-        <input type="text" name= "last_name" placeholder="last name...">
-        <label>Age</label>
-        <input type="number" name="age" placeholder="age..">
-        <button type="submit" class="btn btn-primary mb1 black bg-yellow">Add</button>  
-    </form>
-    </body>
+        <form method="POST" class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Name:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="name" id="name" placeholder="Enter name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-10" for="model">Model/Serial Number:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="model" id="model" placeholder="Enter model/serial number">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="amount">Amount:</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter amount">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-warning">Submit</button>
+            </div>
+          </div>
+        </form> 
+    {% endblock %}
