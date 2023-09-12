@@ -6,6 +6,7 @@
     <thead>
       <tr>
         <th scope="col">Name</th>
+        <th scope="col">Image</th>
         <th scope="col">Model/Serial #</th>
         <th scope="col">Amount</th>
       </tr>
@@ -14,6 +15,7 @@
       {% for note in user.notes %}
       <tr>
         <td>{{ note.name }}</td>
+        <td><img src="data:image/jpeg;base64,{{ note.data }}" width="200" height="auto"></td>
         <td>{{ note.model }}</td>
         <td>{{ note.amount }}
           <button type="button" class="close" onClick="deleteNote({{ note.id }})">
