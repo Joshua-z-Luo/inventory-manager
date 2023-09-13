@@ -1,6 +1,14 @@
 # Inventory Manager
 A Flask app that stores images and information on a SQL Database and displays it
 
+
+## Screenshots
+![Example screenshot1](./images/login.gif)
+
+![Example screenshot1](./images/upload.gif)
+
+![Example screenshot1](./images/delete.gif)
+
 ## Features
 - User login system
 - Store images and other data
@@ -13,10 +21,6 @@ A Flask app that stores images and information on a SQL Database and displays it
 - REST
 - Jinja
 - SQLite
-
-
-
-## Screenshots
 
 
 ## Contact
